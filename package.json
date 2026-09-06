@@ -1,0 +1,20 @@
+{
+  "name": "futuristic-call-of-shooty",
+  "version": "1.0.0",
+  "description": "AAA Tactical Three.js First-Person Shooter Prototype - CoD Parity in WebGL2",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "threejs",
+    "webgl2",
+    "fps",
+    "call-of-duty",
+    "cannon-es",
+    "postprocessing",
+    "pbr"
+  ],
+  "author": "Pierreg99",
+  "license": "MIT"
+}
