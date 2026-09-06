@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%">
+  <rect width="900" height="500" fill="#030712"/>
+  
+  <text x="450" y="45" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#22d3ee" text-anchor="middle" letter-spacing="3">
+    ❖ 5-SYSTEM MODULAR ENGINE ARCHITECTURE
+  </text>
+
+  <!-- System 1 -->
+  <rect x="50" y="80" width="240" height="170" rx="8" fill="#0b1324" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="70" y="110" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#22d3ee">1. GRUNDFRAMEWORK</text>
+  <text x="70" y="135" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Three.js WebGL2 Context</text>
+  <text x="70" y="155" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• ACES Filmic Tone Mapping</text>
+  <text x="70" y="175" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• UnrealBloom + SSAO</text>
+  <text x="70" y="195" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Cannon-es Physics World</text>
+  <text x="70" y="215" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Raycast Grounding</text>
+
+  <!-- System 2 -->
+  <rect x="330" y="80" width="240" height="170" rx="8" fill="#0b1324" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="350" y="110" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#f59e0b">2. ENVIRONMENT &amp; PBR</text>
+  <text x="350" y="135" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• 3x3 Sobel Normal Maps</text>
+  <text x="350" y="155" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• PMREM HDR Sky Reflections</text>
+  <text x="350" y="175" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• 3 Tactical Theaters (Maps)</text>
+  <text x="350" y="195" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• PCFSoft Shadow Cascades</text>
+  <text x="350" y="215" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Film Grain &amp; Aberration</text>
+
+  <!-- System 3 -->
+  <rect x="610" y="80" width="240" height="170" rx="8" fill="#0b1324" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="630" y="110" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#ef4444">3. GAMEPLAY &amp; KINETICS</text>
+  <text x="630" y="135" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• SpringDamper3D Recoil</text>
+  <text x="630" y="155" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Mouse Delta Momentum Sway</text>
+  <text x="630" y="175" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• ADS 48° Zoom Transition</text>
+  <text x="630" y="195" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Hitscan + Surface Decals</text>
+  <text x="630" y="215" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• 4-State Robotic AI FSM</text>
+
+  <!-- System 4 -->
+  <rect x="190" y="280" width="240" height="170" rx="8" fill="#0b1324" stroke="#10b981" stroke-width="1.5"/>
+  <text x="210" y="310" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#10b981">4. AUDIO &amp; FEEDBACK</text>
+  <text x="210" y="335" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Web Audio HRTF Panners</text>
+  <text x="210" y="355" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Stereo-Panned Footsteps</text>
+  <text x="210" y="375" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Trauma^2 Screen-Shake</text>
+  <text x="210" y="395" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Haptic Vibration API</text>
+  <text x="210" y="415" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Directional Damage Ring</text>
+
+  <!-- System 5 -->
+  <rect x="470" y="280" width="240" height="170" rx="8" fill="#0b1324" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="490" y="310" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#38bdf8">5. DUAL INPUT &amp; HUD</text>
+  <text x="490" y="335" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Pointer Lock Desktop Mode</text>
+  <text x="490" y="355" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Virtual Dual-Analog Touch</text>
+  <text x="490" y="375" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• 360° Radar Canvas Sweep</text>
+  <text x="490" y="395" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Live Skin Customizer</text>
+  <text x="490" y="415" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Animated SVG Kill-Feed</text>
+</svg>

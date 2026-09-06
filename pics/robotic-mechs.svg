@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <rect width="800" height="400" fill="#020612"/>
+  
+  <text x="400" y="40" font-family="'Space Grotesk', sans-serif" font-size="18" font-weight="700" fill="#22d3ee" text-anchor="middle" letter-spacing="2">
+    ❖ HOSTILE COMBAT ROBOTICS // UNIT ARCHETYPES
+  </text>
+
+  <!-- Left: Pulsar Recon Drone -->
+  <g transform="translate(180, 190)">
+    <circle cx="0" cy="0" r="45" fill="#111c2e" stroke="#22d3ee" stroke-width="2"/>
+    <circle cx="0" cy="0" r="15" fill="#0284c7" stroke="#22d3ee" stroke-width="1.5"/>
+
+    <!-- 3 Gyro Armor Shields -->
+    <rect x="-60" y="-8" width="20" height="16" rx="2" fill="#ef4444"/>
+    <rect x="40" y="-8" width="20" height="16" rx="2" fill="#ef4444"/>
+    <rect x="-10" y="-60" width="20" height="16" rx="2" fill="#ef4444"/>
+
+    <!-- Rotor Rotation Lines -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="rgba(34, 211, 238, 0.3)" stroke-dasharray="8 6" stroke-width="1"/>
+  </g>
+  <text x="180" y="300" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#22d3ee" text-anchor="middle">PULSAR RECON DRONE</text>
+  <text x="180" y="325" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">100 HP · TRI-ROTOR HOVER · AGGRESSIVE SWARM</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="80" x2="400" y2="350" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Right: Aegis Colossus Heavy Walker Mech -->
+  <g transform="translate(600, 190)">
+    <!-- Legs -->
+    <line x1="-30" y1="40" x2="-45" y2="80" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <line x1="30" y1="40" x2="45" y2="80" stroke="#334155" stroke-width="8" stroke-linecap="round"/>
+    <rect x="-60" y="80" width="25" height="10" rx="3" fill="#1e293b"/>
+    <rect x="35" y="80" width="25" height="10" rx="3" fill="#1e293b"/>
+
+    <!-- Heavy Torso -->
+    <rect x="-50" y="-40" width="100" height="80" rx="6" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+
+    <!-- Glowing Core Sensor -->
+    <circle cx="0" cy="-5" r="16" fill="#ef4444" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- Twin Heavy Energy Cannons -->
+    <rect x="-75" y="-20" width="20" height="50" rx="3" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+    <rect x="55" y="-20" width="20" height="50" rx="3" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+  </g>
+  <text x="600" y="300" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#ef4444" text-anchor="middle">AEGIS COLOSSUS MECH</text>
+  <text x="600" y="325" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">250 HP · HEAVY BIPEDAL WALKER · TWIN CANNONS</text>
+</svg>
