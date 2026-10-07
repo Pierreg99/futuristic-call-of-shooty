@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/readme-banner.svg" alt="futuristic-call-of-shooty" width="100%">
+
 # FUTURISTIC CALL OF SHOOTY (AAA THREE.JS WEBGL2 FPS)
 
 <p><strong>Taktische Three.js-First-Person-Shooter-Engine mit PBR, HDR, Touch-Steuerung und Bot-Gegnern.</strong></p>
@@ -11,10 +13,38 @@
 <p><a href="#schnellstart">Schnellstart</a> · <a href="#projektstruktur">Projektstruktur</a> · <a href="#english-summary">English</a></p>
 </div>
 
+<table>
+<tr>
+<td width="58%" valign="top">
+
+### Bestand
+
+AAA Tactical Three.js First-Person Shooter Engine - CoD Parity with PBR Sobel Normals, PMREM HDR, Spring Kinetics, Touch Controls and Robotic AI
+
+Der Default-Branch `main` ist die Fläche, die zählt. Was nicht in diesem Baum liegt, ist kein Feature dieses Repos.
+
+</td>
+<td width="42%" valign="top">
+
+### Fakten
+
+| Feld | Wert |
+| --- | --- |
+| Owner | Pierreg99 |
+| Branch | `main` |
+| Sichtbarkeit | öffentlich |
+| Sprache | HTML |
+| Archiv | nein |
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## Inhaltsverzeichnis
 
+- [Bestand und Fakten](#bestand)
 - [Überblick](#überblick)
 - [Features](#features)
 - [Schnellstart](#schnellstart)
@@ -32,7 +62,7 @@ Taktische Three.js-First-Person-Shooter-Engine mit PBR, HDR, Touch-Steuerung und
 | Merkmal | Wert |
 | --- | --- |
 | Sprachen | HTML (100%) |
-| Dateien im Repository | 29 |
+| Dateien im Repository | 30 |
 | Einstiegspunkte | `index.html` |
 | Version (`package.json`) | 1.0.0 |
 | Lizenz | [LICENSE](LICENSE) |
@@ -46,7 +76,7 @@ Taktische Three.js-First-Person-Shooter-Engine mit PBR, HDR, Touch-Steuerung und
 - Gamepad-Unterstützung
 - Touch- und Pointer-Steuerung
 - Echtzeit-Render-Schleife (requestAnimationFrame)
-- 5 SVG-Grafiken
+- 6 SVG-Grafiken
 - 21 Markdown-Dokumente
 
 ## Schnellstart
@@ -82,7 +112,8 @@ flowchart LR
     R --> D0["docs/<br/>10 Dateien"]
     R --> D1["audits/<br/>5 Dateien"]
     R --> D2["pics/<br/>5 Dateien"]
-    R --> D3["reviews/<br/>1 Datei"]
+    R --> D3["assets/<br/>1 Datei"]
+    R --> D4["reviews/<br/>1 Datei"]
     E{{"Einstieg: index.html"}}
     E -.-> R
 ```
@@ -91,6 +122,8 @@ flowchart LR
 
 ```text
 futuristic-call-of-shooty/
+├── assets/  (1 Datei)
+│   └── readme-banner.svg
 ├── audits/  (5 Dateien)
 │   ├── A11Y_AUDIT.md
 │   ├── AGENT_REPORT_COD_CRITIC.md
