@@ -6,7 +6,7 @@ import { chromium } from 'playwright';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const output = path.join(root, 'screenshots');
-const baseUrl = 'http://127.0.0.1:8080';
+const baseUrl = 'http://127.0.0.1:8080/?readme-capture=1';
 const screenshots = [
   '01-start-screen.png',
   '02-gameplay-afg7.png',
@@ -110,9 +110,7 @@ try {
   await page.waitForTimeout(250);
   await page.addStyleTag({ content: '#touch-controls-layer { display: none !important; }' });
 
-  // Turn away from the central tower to capture useful level geometry,
-  // lighting, the weapon viewmodel and the tactical HUD in the frame.
-  await page.mouse.move(1120, 360, { steps: 8 });
+  // The readme-capture URL enables a deterministic camera and lighting preset.
   await stepFrame(page);
   await capture(page, '02-gameplay-afg7.png');
 
@@ -162,30 +160,6 @@ try {
   mobilePage.on('pageerror', (error) => pageErrors.push(error.message));
   await openGame(mobilePage);
   await mobilePage.locator('#btn-start').click({ force: true });
-  await mobilePage.evaluate(() => {
-    // Drive the same touch-look handler used by a physical touchscreen.
-    const zone = document.getElementById('touch-look-zone');
-    const makeTouch = (x, y) => new Touch({
-      identifier: 7,
-      target: zone,
-      clientX: x,
-      clientY: y
-    });
-    const start = makeTouch(220, 460);
-    zone.dispatchEvent(new TouchEvent('touchstart', {
-      bubbles: true, cancelable: true,
-      touches: [start], targetTouches: [start], changedTouches: [start]
-    }));
-    const move = makeTouch(390, 460);
-    zone.dispatchEvent(new TouchEvent('touchmove', {
-      bubbles: true, cancelable: true,
-      touches: [move], targetTouches: [move], changedTouches: [move]
-    }));
-    zone.dispatchEvent(new TouchEvent('touchend', {
-      bubbles: true, cancelable: true,
-      touches: [], targetTouches: [], changedTouches: [move]
-    }));
-  });
   await stepFrame(mobilePage);
   await capture(mobilePage, '06-mobile-touch.png');
   await mobile.close();
