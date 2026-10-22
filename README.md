@@ -113,6 +113,24 @@ Der zentrale Laufzeitcode liegt in einer einzelnen HTML-Datei. HTML, CSS, Import
 
 Die konkret verwendeten Bibliotheksversionen sind in der Import-Map in `index.html` festgelegt. Änderungen an diesen Versionen sollten zusammen mit einem Funktions- und Browser-Test erfolgen.
 
+
+## Architektur auf einen Blick
+
+Der Browser lädt die nativen ES-Module aus der Import-Map. Rendering, Physik und HUD werden in der zentralen Laufzeit von `index.html` zusammengeführt.
+
+```mermaid
+flowchart TD
+    A["Browser / index.html"] --> B["Import-Map"]
+    B --> C["Three.js + Post-Processing"]
+    B --> D["Cannon-es Physics"]
+    C --> E["Szene, Kamera und Rendering"]
+    D --> F["Spielerbewegung und Bodenprüfung"]
+    E --> G["Frame-Loop und HUD"]
+    F --> G
+    G --> H["Desktop- und Touch-Eingabe"]
+```
+
+
 ## Dokumentation
 
 | Dokument | Inhalt |
@@ -147,6 +165,14 @@ Die Berichte im Repository sind Projektdokumentation. Ihre Messwerte sollten auf
 2. Änderung möglichst klein und nachvollziehbar halten.
 3. Start im lokalen Browser testen und Browser-/Hardware-Details bei Performance-Änderungen notieren.
 4. Im Pull Request Verhalten, Testschritte, Screenshots oder kurze Aufzeichnungen und bekannte Einschränkungen angeben.
+
+
+## English summary
+
+Futuristic Call of Shooty is a browser-based first-person shooter prototype built around Three.js, procedural visuals, a tactical HUD, and desktop/touch controls.
+
+Start a local HTTP server in the repository directory with `python3 -m http.server 8080` (or `npm start`), then open [http://localhost:8080](http://localhost:8080). Three.js, Cannon-es, and web fonts are loaded from external CDNs, so this is not a fully offline build.
+
 
 ## Lizenz
 
