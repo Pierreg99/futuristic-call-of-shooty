@@ -744,6 +744,7 @@
        - Weapon Viewmodel Rig (Arms + Carbine) with 3D Spring Recoil, Sway, ADS
        ========================================================================= */
     const canvas = document.getElementById('webgl-canvas');
+    const isReadmeCapture = new URLSearchParams(window.location.search).has('readme-capture');
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x020408);
     scene.fog = new THREE.FogExp2(0x020408, 0.016);
@@ -2368,7 +2369,18 @@
 
     document.getElementById('btn-start').addEventListener('click', () => {
       initWebAudio();
-      if (!isTouch) canvas.requestPointerLock();
+      if (isReadmeCapture) {
+        // Deterministic framing for browser README screenshots only.
+        // The ordinary game view is unchanged when the query flag is absent.
+        cameraState.yaw = 1.0;
+        cameraState.pitch = -0.035;
+        renderer.toneMappingExposure = 1.55;
+        ambientLight.color.setHex(0x526a83);
+        ambientLight.intensity = 1.6;
+        scene.fog.color.setHex(0x071426);
+        scene.fog.density = 0.0075;
+      }
+      if (!isTouch && !isReadmeCapture) canvas.requestPointerLock();
       document.getElementById('start-overlay').style.display = 'none';
       isLocked = true;
     });
