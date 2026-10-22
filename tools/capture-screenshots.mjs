@@ -58,7 +58,7 @@ async function openGame(page) {
 }
 
 async function capture(page, filename) {
-  await page.screenshot({ path: path.join(output, filename), fullPage: false, animations: 'disabled' });
+  await page.screenshot({ path: path.join(output, filename), fullPage: false, animations: 'disabled', timeout: 120000 });
   console.log('Captured ' + filename);
 }
 
@@ -80,6 +80,9 @@ try {
     deviceScaleFactor: 1
   });
   const page = await desktop.newPage();
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'devicePixelRatio', { configurable: true, get: () => 0.5 });
+  });
   const pageErrors = [];
   page.on('pageerror', (error) => pageErrors.push(error.message));
 
@@ -112,6 +115,9 @@ try {
     hasTouch: true
   });
   const mobilePage = await mobile.newPage();
+  await mobilePage.addInitScript(() => {
+    Object.defineProperty(window, 'devicePixelRatio', { configurable: true, get: () => 0.5 });
+  });
   mobilePage.on('pageerror', (error) => pageErrors.push(error.message));
   await openGame(mobilePage);
   await capture(mobilePage, '06-mobile-touch.png');
