@@ -10,6 +10,10 @@ on:
       - '.github/workflows/capture-screenshots.yml'
   workflow_dispatch:
 
+concurrency:
+  group: readme-screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 

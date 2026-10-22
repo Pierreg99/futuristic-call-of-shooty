@@ -31,11 +31,12 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function openGame(page) {
   let lastError;
-  for (let attempt = 0; attempt < 20; attempt += 1) {
+  for (let attempt = 0; attempt < 3; attempt += 1) {
     try {
-      await page.goto(baseUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+      await page.route(/^https:\/\/fonts\.(googleapis|gstatic)\.com\//, (route) => route.abort());
+      await page.goto(baseUrl, { waitUntil: 'domcontentloaded', timeout: 25000 });
       await page.waitForSelector('#webgl-canvas', { timeout: 10000 });
-      await page.waitForTimeout(6500);
+      await page.waitForTimeout(2500);
       const graphics = await page.evaluate(() => {
         const canvas = document.querySelector('#webgl-canvas');
         return {
@@ -75,7 +76,7 @@ try {
   });
 
   const desktop = await browser.newContext({
-    viewport: { width: 1600, height: 900 },
+    viewport: { width: 1280, height: 720 },
     deviceScaleFactor: 1
   });
   const page = await desktop.newPage();
@@ -86,11 +87,12 @@ try {
   await capture(page, '01-start-screen.png');
 
   await page.locator('#btn-start').click({ force: true });
-  await page.waitForTimeout(1800);
+  await page.addStyleTag({ content: '#touch-controls-layer { display: none !important; }' });
+  await page.waitForTimeout(900);
   await capture(page, '02-gameplay-afg7.png');
 
   await page.locator('#btn-map-hangar').click({ force: true });
-  await page.waitForTimeout(1400);
+  await page.waitForTimeout(700);
   await capture(page, '03-hangar-alpha.png');
 
   await page.locator('#btn-map-apex').click({ force: true });
