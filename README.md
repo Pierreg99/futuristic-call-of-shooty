@@ -38,6 +38,44 @@ Das Projekt ist bewusst als direkt startbare Browser-Anwendung aufgebaut: Der Ei
 
 Die Funktionsliste beschreibt den Implementierungsumfang des Prototyps. Sie ist keine Aussage über plattformübergreifend abgeschlossene QA, kompetitives Multiplayer, Anti-Cheat oder garantierte Bildraten.
 
+
+## Screenshots
+
+Diese Aufnahmen werden automatisiert mit Chromium aus der echten Browser-Anwendung in `index.html` erstellt. Es handelt sich um Laufzeit-Screenshots, nicht um Mockups. Die Galerie wird bei Änderungen am Spielcode aktualisiert.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="./screenshots/01-start-screen.png" alt="Startbildschirm von Futuristic Call of Shooty mit taktischem Intro-Overlay" width="100%">
+<p align="center"><sub>01 · Startbildschirm und Initialisierung</sub></p>
+</td>
+<td width="50%" valign="top">
+<img src="./screenshots/02-gameplay-afg7.png" alt="Gameplay mit AFG-7 Tower, taktischem HUD, Minimap und Waffen-Viewmodel" width="100%">
+<p align="center"><sub>02 · AFG-7 Tower — Gameplay und HUD</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<img src="./screenshots/03-hangar-alpha.png" alt="Hangar Alpha Karte im laufenden Spiel" width="100%">
+<p align="center"><sub>03 · Hangar Alpha</sub></p>
+</td>
+<td width="50%" valign="top">
+<img src="./screenshots/04-apex-spire.png" alt="Apex Spire Karte im laufenden Spiel" width="100%">
+<p align="center"><sub>04 · Apex Spire</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<img src="./screenshots/05-gold-apex.png" alt="MK-18 Viewmodel mit ausgewähltem Gold-Apex-Waffenskin" width="100%">
+<p align="center"><sub>05 · MK-18 — Gold Apex Skin</sub></p>
+</td>
+<td width="50%" valign="top">
+<img src="./screenshots/06-mobile-touch.png" alt="Hochformatige mobile Ansicht mit virtuellen Touch-Steuerelementen" width="100%">
+<p align="center"><sub>06 · Mobile Ansicht mit Touch-Steuerung</sub></p>
+</td>
+</tr>
+</table>
+
 ## Schnellstart
 
 ### Voraussetzungen
