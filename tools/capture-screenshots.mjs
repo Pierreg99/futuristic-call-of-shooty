@@ -120,6 +120,8 @@ try {
   });
   mobilePage.on('pageerror', (error) => pageErrors.push(error.message));
   await openGame(mobilePage);
+  await mobilePage.locator('#btn-start').click({ force: true });
+  await mobilePage.waitForTimeout(900);
   await capture(mobilePage, '06-mobile-touch.png');
   await mobile.close();
 
