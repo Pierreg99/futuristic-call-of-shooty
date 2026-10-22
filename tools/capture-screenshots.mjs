@@ -107,21 +107,33 @@ try {
   await capture(page, '01-start-screen.png');
 
   await page.locator('#btn-start').click({ force: true });
-  await stepFrame(page);
+  await page.waitForTimeout(250);
   await page.addStyleTag({ content: '#touch-controls-layer { display: none !important; }' });
-  await page.waitForTimeout(900);
+
+  // Turn away from the central tower to capture useful level geometry,
+  // lighting, the weapon viewmodel and the tactical HUD in the frame.
+  await page.mouse.move(1120, 360, { steps: 8 });
+  await stepFrame(page);
   await capture(page, '02-gameplay-afg7.png');
 
-  await page.locator('#btn-map-hangar').click({ force: true });
-  await stepFrame(page);
+  async function chooseOption(id) {
+    const active = await page.evaluate((buttonId) => {
+      const button = document.getElementById(buttonId);
+      if (!button) return false;
+      button.click();
+      return button.classList.contains('active');
+    }, id);
+    if (!active) throw new Error('Could not activate game option: ' + id);
+    await stepFrame(page);
+  }
+
+  await chooseOption('btn-map-hangar');
   await capture(page, '03-hangar-alpha.png');
 
-  await page.locator('#btn-map-apex').click({ force: true });
-  await page.waitForTimeout(1400);
+  await chooseOption('btn-map-apex');
   await capture(page, '04-apex-spire.png');
 
-  await page.locator('#btn-skin-gold').click({ force: true });
-  await stepFrame(page);
+  await chooseOption('btn-skin-gold');
   await capture(page, '05-gold-apex.png');
 
   await desktop.close();
@@ -150,6 +162,30 @@ try {
   mobilePage.on('pageerror', (error) => pageErrors.push(error.message));
   await openGame(mobilePage);
   await mobilePage.locator('#btn-start').click({ force: true });
+  await mobilePage.evaluate(() => {
+    // Drive the same touch-look handler used by a physical touchscreen.
+    const zone = document.getElementById('touch-look-zone');
+    const makeTouch = (x, y) => new Touch({
+      identifier: 7,
+      target: zone,
+      clientX: x,
+      clientY: y
+    });
+    const start = makeTouch(220, 460);
+    zone.dispatchEvent(new TouchEvent('touchstart', {
+      bubbles: true, cancelable: true,
+      touches: [start], targetTouches: [start], changedTouches: [start]
+    }));
+    const move = makeTouch(390, 460);
+    zone.dispatchEvent(new TouchEvent('touchmove', {
+      bubbles: true, cancelable: true,
+      touches: [move], targetTouches: [move], changedTouches: [move]
+    }));
+    zone.dispatchEvent(new TouchEvent('touchend', {
+      bubbles: true, cancelable: true,
+      touches: [], targetTouches: [], changedTouches: [move]
+    }));
+  });
   await stepFrame(mobilePage);
   await capture(mobilePage, '06-mobile-touch.png');
   await mobile.close();
