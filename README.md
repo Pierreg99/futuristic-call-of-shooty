@@ -31,7 +31,7 @@ Das Projekt ist bewusst als direkt startbare Browser-Anwendung aufgebaut: Der Ei
 - **Bewegung und Physik:** FPS-Bewegung, Sprung und Bodenprüfung auf Basis von Cannon-es.
 - **Waffen-Feedback:** Viewmodel, Feuer, Nachladen, Aim-down-sights (ADS) und dynamisches Rückstoß-/Sway-Verhalten.
 - **Taktische HUD-Elemente:** Fadenkreuz, Trefferindikator, Lebens-/Schildanzeige, Munition, Kill-Feed und Minimap.
-- **Gegner und Gefechte:** robotische Gegner als Zieltypen für das Einzelspieler-Gefechts-Prototype.
+- **Gegner und Gefechte:** robotische Gegner als Zieltypen für das Einzelspieler-Gefecht.
 - **Karten- und Skin-Auswahl:** AFG-7 Tower, Hangar Alpha und Apex Spire sowie Obsidian-, Gold-Apex- und Frost-Varianten.
 - **Touch-Eingabe:** virtueller Bewegungsstick, Touch-Look und Aktionsbuttons für kleinere Displays.
 - **Eigenständige Visuals:** Projektgrafiken und mehrere Umgebungselemente werden prozedural oder als SVG im Repository bereitgestellt.
@@ -64,7 +64,7 @@ Dann im Browser öffnen:
 
 **http://localhost:8080**
 
-Die Seite nicht direkt per `file://` öffnen: ES-Module und Import-Maps funktionieren zuverlässig über einen lokalen HTTP-Server. Beim Beenden des Servers im Terminal `Ctrl+C drücken.
+Die Seite nicht direkt per `file://` öffnen: ES-Module und Import-Maps funktionieren zuverlässig über einen lokalen HTTP-Server. Beim Beenden des Servers im Terminal `Ctrl+C` drücken.
 
 ## Steuerung
 
@@ -82,7 +82,7 @@ Auf dem Desktop zuerst **Simulation initialisieren** wählen. Für Pointer-Lock-
 
 ## Technischer Aufbau
 
-Der zentrale Laufzeitcode liegt in einer einzelnen HTML-Datei. HTML, CSS, Import-Map und JavaScript-Modul sind direkt in `index.html) eingebettet.
+Der zentrale Laufzeitcode liegt in einer einzelnen HTML-Datei. HTML, CSS, Import-Map und JavaScript-Modul sind direkt in `index.html` eingebettet.
 
 ```text
 .
