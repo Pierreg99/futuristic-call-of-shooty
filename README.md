@@ -11,33 +11,11 @@
 [![Renderer](https://img.shields.io/badge/renderer-Three.js-22D3EE?style=flat-square)](https://threejs.org/)
 [![Status](https://img.shields.io/badge/status-prototype-F59E0B?style=flat-square)](ROADMAP.md)
 
-[Features](#funktionen) · [Start](#schnellstart) · [Steuerung](#steuerung) · [Dokumentation](#dokumentation) · [Roadmap](ROADMAP.md)
+[Screenshots](#screenshots) · [Features](#funktionen) · [Start](#schnellstart) · [Steuerung](#steuerung) · [Dokumentation](#dokumentation) · [Roadmap](ROADMAP.md)
 
 </div>
 
 ---
-
-## Überblick
-
-**Futuristic Call of Shooty** ist ein browserbasierter First-Person-Shooter-Prototyp. Die Oberfläche kombiniert eine dunkle taktische HUD-Ästhetik mit einer prozedural aufgebauten 3D-Szene, Waffen-Viewmodel, Gegnern und Desktop- sowie Touch-Eingaben.
-
-Das Projekt ist bewusst als direkt startbare Browser-Anwendung aufgebaut: Der Einstiegspunkt ist `index.html`; ein eigener Build-Schritt ist nicht erforderlich. Das bedeutet allerdings **nicht**, dass die Anwendung vollständig offline läuft: Three.js, Cannon-es und die verwendeten Schriftarten werden aktuell von externen CDNs geladen.
-
-> **Projektstatus:** spielbarer Prototyp und technische Grundlage für weitere Iterationen. Die Bezeichnung „AAA“ in älteren Unterlagen ist ein Designziel, keine unabhängig bestätigte Qualitäts- oder Performance-Zertifizierung.
-
-## Funktionen
-
-- **3D-Rendering:** Three.js-Szene, Beleuchtung, Schatten, prozedural erzeugte Umgebungsdarstellung und Post-Processing.
-- **Bewegung und Physik:** FPS-Bewegung, Sprung und Bodenprüfung auf Basis von Cannon-es.
-- **Waffen-Feedback:** Viewmodel, Feuer, Nachladen, Aim-down-sights (ADS) und dynamisches Rückstoß-/Sway-Verhalten.
-- **Taktische HUD-Elemente:** Fadenkreuz, Trefferindikator, Lebens-/Schildanzeige, Munition, Kill-Feed und Minimap.
-- **Gegner und Gefechte:** robotische Gegner als Zieltypen für das Einzelspieler-Gefecht.
-- **Karten- und Skin-Auswahl:** AFG-7 Tower, Hangar Alpha und Apex Spire sowie Obsidian-, Gold-Apex- und Frost-Varianten.
-- **Touch-Eingabe:** virtueller Bewegungsstick, Touch-Look und Aktionsbuttons für kleinere Displays.
-- **Eigenständige Visuals:** Projektgrafiken und mehrere Umgebungselemente werden prozedural oder als SVG im Repository bereitgestellt.
-
-Die Funktionsliste beschreibt den Implementierungsumfang des Prototyps. Sie ist keine Aussage über plattformübergreifend abgeschlossene QA, kompetitives Multiplayer, Anti-Cheat oder garantierte Bildraten.
-
 
 ## Screenshots
 
@@ -75,6 +53,29 @@ Diese Aufnahmen werden automatisiert mit Chromium aus der echten Browser-Anwendu
 </td>
 </tr>
 </table>
+
+
+## Überblick
+
+**Futuristic Call of Shooty** ist ein browserbasierter First-Person-Shooter-Prototyp. Die Oberfläche kombiniert eine dunkle taktische HUD-Ästhetik mit einer prozedural aufgebauten 3D-Szene, Waffen-Viewmodel, Gegnern und Desktop- sowie Touch-Eingaben.
+
+Das Projekt ist bewusst als direkt startbare Browser-Anwendung aufgebaut: Der Einstiegspunkt ist `index.html`; ein eigener Build-Schritt ist nicht erforderlich. Das bedeutet allerdings **nicht**, dass die Anwendung vollständig offline läuft: Three.js, Cannon-es und die verwendeten Schriftarten werden aktuell von externen CDNs geladen.
+
+> **Projektstatus:** spielbarer Prototyp und technische Grundlage für weitere Iterationen. Die Bezeichnung „AAA“ in älteren Unterlagen ist ein Designziel, keine unabhängig bestätigte Qualitäts- oder Performance-Zertifizierung.
+
+## Funktionen
+
+- **3D-Rendering:** Three.js-Szene, Beleuchtung, Schatten, prozedural erzeugte Umgebungsdarstellung und Post-Processing.
+- **Bewegung und Physik:** FPS-Bewegung, Sprung und Bodenprüfung auf Basis von Cannon-es.
+- **Waffen-Feedback:** Viewmodel, Feuer, Nachladen, Aim-down-sights (ADS) und dynamisches Rückstoß-/Sway-Verhalten.
+- **Taktische HUD-Elemente:** Fadenkreuz, Trefferindikator, Lebens-/Schildanzeige, Munition, Kill-Feed und Minimap.
+- **Gegner und Gefechte:** robotische Gegner als Zieltypen für das Einzelspieler-Gefecht.
+- **Karten- und Skin-Auswahl:** AFG-7 Tower, Hangar Alpha und Apex Spire sowie Obsidian-, Gold-Apex- und Frost-Varianten.
+- **Touch-Eingabe:** virtueller Bewegungsstick, Touch-Look und Aktionsbuttons für kleinere Displays.
+- **Eigenständige Visuals:** Projektgrafiken und mehrere Umgebungselemente werden prozedural oder als SVG im Repository bereitgestellt.
+
+Die Funktionsliste beschreibt den Implementierungsumfang des Prototyps. Sie ist keine Aussage über plattformübergreifend abgeschlossene QA, kompetitives Multiplayer, Anti-Cheat oder garantierte Bildraten.
+
 
 ## Schnellstart
 
