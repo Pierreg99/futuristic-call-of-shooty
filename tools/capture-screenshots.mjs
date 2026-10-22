@@ -255,9 +255,9 @@ try {
 
   await activateTouchButton(mobilePage, 'touch-btn-ads');
   await stepFrame(mobilePage, 3, 120);
-  await capture(mobilePage, '20-mobile-combat.png');
   await activateTouchButton(mobilePage, 'touch-btn-fire');
   await stepFrame(mobilePage, 2);
+  await capture(mobilePage, '20-mobile-combat.png');
   await mobile.close();
 
   const actual = (await readdir(output)).filter((file) => /^\d{2}-.+\.png$/i.test(file));
