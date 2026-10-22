@@ -36,7 +36,7 @@ async function openGame(page) {
       await page.route(/^https:\/\/fonts\.(googleapis|gstatic)\.com\//, (route) => route.abort());
       await page.goto(baseUrl, { waitUntil: 'domcontentloaded', timeout: 25000 });
       await page.waitForSelector('#webgl-canvas', { timeout: 10000 });
-      await page.waitForTimeout(2500);
+      await page.waitForTimeout(900);
       const graphics = await page.evaluate(() => {
         const canvas = document.querySelector('#webgl-canvas');
         return {
@@ -55,6 +55,11 @@ async function openGame(page) {
     }
   }
   throw lastError ?? new Error('Could not open the local game.');
+}
+
+async function stepFrame(page) {
+  await page.evaluate(() => window.__readmeCaptureStep?.());
+  await page.waitForTimeout(200);
 }
 
 async function capture(page, filename) {
@@ -81,21 +86,34 @@ try {
   });
   const page = await desktop.newPage();
   await page.addInitScript(() => {
+    const callbacks = [];
+    window.requestAnimationFrame = (callback) => {
+      callbacks.push(callback);
+      return callbacks.length;
+    };
+    window.__readmeCaptureStep = () => {
+      const callback = callbacks.shift();
+      if (!callback) return false;
+      callback(performance.now());
+      return true;
+    };
     Object.defineProperty(window, 'devicePixelRatio', { configurable: true, get: () => 0.5 });
   });
   const pageErrors = [];
   page.on('pageerror', (error) => pageErrors.push(error.message));
 
   await openGame(page);
+  await stepFrame(page);
   await capture(page, '01-start-screen.png');
 
   await page.locator('#btn-start').click({ force: true });
+  await stepFrame(page);
   await page.addStyleTag({ content: '#touch-controls-layer { display: none !important; }' });
   await page.waitForTimeout(900);
   await capture(page, '02-gameplay-afg7.png');
 
   await page.locator('#btn-map-hangar').click({ force: true });
-  await page.waitForTimeout(700);
+  await stepFrame(page);
   await capture(page, '03-hangar-alpha.png');
 
   await page.locator('#btn-map-apex').click({ force: true });
@@ -103,7 +121,7 @@ try {
   await capture(page, '04-apex-spire.png');
 
   await page.locator('#btn-skin-gold').click({ force: true });
-  await page.waitForTimeout(900);
+  await stepFrame(page);
   await capture(page, '05-gold-apex.png');
 
   await desktop.close();
@@ -116,12 +134,23 @@ try {
   });
   const mobilePage = await mobile.newPage();
   await mobilePage.addInitScript(() => {
+    const callbacks = [];
+    window.requestAnimationFrame = (callback) => {
+      callbacks.push(callback);
+      return callbacks.length;
+    };
+    window.__readmeCaptureStep = () => {
+      const callback = callbacks.shift();
+      if (!callback) return false;
+      callback(performance.now());
+      return true;
+    };
     Object.defineProperty(window, 'devicePixelRatio', { configurable: true, get: () => 0.5 });
   });
   mobilePage.on('pageerror', (error) => pageErrors.push(error.message));
   await openGame(mobilePage);
   await mobilePage.locator('#btn-start').click({ force: true });
-  await mobilePage.waitForTimeout(900);
+  await stepFrame(mobilePage);
   await capture(mobilePage, '06-mobile-touch.png');
   await mobile.close();
 
