@@ -19,42 +19,50 @@
 
 ## Screenshots
 
-Diese Aufnahmen werden automatisiert mit Chromium aus der echten Browser-Anwendung in `index.html` erstellt. Es handelt sich um Laufzeit-Screenshots, nicht um Mockups. Die Galerie wird bei Änderungen am Spielcode aktualisiert.
+Die **20 Laufzeit-Aufnahmen** werden mit Chromium aus `index.html` erstellt – keine Mockups. Sie zeigen drei Karten, alle drei Waffenskins, ADS/Feuer/Nachladen, verschiedene Desktop-Auflösungen und mobile Touch-Steuerung. Die Capture-Automatisierung prüft, dass alle nummerierten PNGs erzeugt wurden.
 
 <table>
 <tr>
-<td width="50%" valign="top">
-<img src="./screenshots/01-start-screen.png" alt="Startbildschirm von Futuristic Call of Shooty mit taktischem Intro-Overlay" width="100%">
-<p align="center"><sub>01 · Startbildschirm und Initialisierung</sub></p>
-</td>
-<td width="50%" valign="top">
-<img src="./screenshots/02-gameplay-afg7.png" alt="Gameplay mit AFG-7 Tower, taktischem HUD, Minimap und Waffen-Viewmodel" width="100%">
-<p align="center"><sub>02 · AFG-7 Tower — Gameplay und HUD</sub></p>
-</td>
+<td width="50%" valign="top"><img src="./screenshots/01-start-screen.png" alt="Startbildschirm von Futuristic Call of Shooty" width="100%"><p align="center"><sub>01 · Startbildschirm mit Initialisierungs-Overlay</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/02-gameplay-afg7.png" alt="Gameplay auf AFG-7 Tower mit taktischem HUD" width="100%"><p align="center"><sub>02 · AFG-7 Tower · Obsidian</sub></p></td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-<img src="./screenshots/03-hangar-alpha.png" alt="Hangar Alpha Karte im laufenden Spiel" width="100%">
-<p align="center"><sub>03 · Hangar Alpha</sub></p>
-</td>
-<td width="50%" valign="top">
-<img src="./screenshots/04-apex-spire.png" alt="Apex Spire Karte im laufenden Spiel" width="100%">
-<p align="center"><sub>04 · Apex Spire</sub></p>
-</td>
+<td width="50%" valign="top"><img src="./screenshots/03-hangar-alpha.png" alt="Hangar Alpha im laufenden Spiel" width="100%"><p align="center"><sub>03 · Hangar Alpha · Obsidian</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/04-apex-spire.png" alt="Apex Spire im laufenden Spiel" width="100%"><p align="center"><sub>04 · Apex Spire · Obsidian</sub></p></td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-<img src="./screenshots/05-gold-apex.png" alt="MK-18 Viewmodel mit ausgewähltem Gold-Apex-Waffenskin" width="100%">
-<p align="center"><sub>05 · MK-18 — Gold Apex Skin</sub></p>
-</td>
-<td width="50%" valign="top">
-<img src="./screenshots/06-mobile-touch.png" alt="Hochformatige mobile Ansicht mit virtuellen Touch-Steuerelementen" width="100%">
-<p align="center"><sub>06 · Mobile Ansicht mit Touch-Steuerung</sub></p>
-</td>
+<td width="50%" valign="top"><img src="./screenshots/05-gold-apex.png" alt="Gold-Apex-Waffenskin mit AFG-7 Tower" width="100%"><p align="center"><sub>05 · AFG-7 Tower · Gold Apex</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/06-frost-damascus.png" alt="Frost-Damascus-Waffenskin mit AFG-7 Tower" width="100%"><p align="center"><sub>06 · AFG-7 Tower · Frost Damascus</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/07-hangar-gold-apex.png" alt="Hangar Alpha mit Gold-Apex-Waffenskin" width="100%"><p align="center"><sub>07 · Hangar Alpha · Gold Apex</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/08-hangar-frost-damascus.png" alt="Hangar Alpha mit Frost-Damascus-Waffenskin" width="100%"><p align="center"><sub>08 · Hangar Alpha · Frost Damascus</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/09-apex-gold-apex.png" alt="Apex Spire mit Gold-Apex-Waffenskin" width="100%"><p align="center"><sub>09 · Apex Spire · Gold Apex</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/10-apex-frost-damascus.png" alt="Apex Spire mit Frost-Damascus-Waffenskin" width="100%"><p align="center"><sub>10 · Apex Spire · Frost Damascus</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/11-aim-down-sights.png" alt="Aim-down-sights-Ansicht mit Holo-Sight" width="100%"><p align="center"><sub>11 · ADS · Holo-Sight</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/12-fire-recoil.png" alt="Waffenfeuer und Rückstoß-Feedback im Spiel" width="100%"><p align="center"><sub>12 · Feuer · Rückstoß</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/13-reload-sequence.png" alt="Taktische Nachlade-Animation mit Reload-HUD" width="100%"><p align="center"><sub>13 · Reload · Magazinwechsel</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/14-reloaded-magazine.png" alt="HUD nach abgeschlossenem Nachladen" width="100%"><p align="center"><sub>14 · HUD · Nachgeladen</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/15-sprint-movement.png" alt="Sprintansicht mit dynamischem FOV" width="100%"><p align="center"><sub>15 · Sprint · Movement</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/16-camera-turn.png" alt="Andere Kameraausrichtung in der Spielszene" width="100%"><p align="center"><sub>16 · Kamera · freie Sicht</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/17-desktop-wide.png" alt="Breites Desktop-Layout mit vollständigem HUD" width="100%"><p align="center"><sub>17 · Desktop · 1600 × 900</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/18-desktop-tablet.png" alt="Kompakteres Layout bei Tablet-Auflösung" width="100%"><p align="center"><sub>18 · Tablet · 1024 × 768</sub></p></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="./screenshots/19-mobile-touch.png" alt="Hochformatige Mobile-Ansicht mit virtuellem Joystick und Aktionsbuttons" width="100%"><p align="center"><sub>19 · Mobile · Touch HUD</sub></p></td>
+<td width="50%" valign="top"><img src="./screenshots/20-mobile-combat.png" alt="Mobile Ansicht mit aktivierter ADS-Steuerung" width="100%"><p align="center"><sub>20 · Mobile · ADS und Combat</sub></p></td>
 </tr>
 </table>
-
-
 ## Überblick
 
 **Futuristic Call of Shooty** ist ein browserbasierter First-Person-Shooter-Prototyp. Die Oberfläche kombiniert eine dunkle taktische HUD-Ästhetik mit einer prozedural aufgebauten 3D-Szene, Waffen-Viewmodel, Gegnern und Desktop- sowie Touch-Eingaben.
