@@ -2016,6 +2016,8 @@
        ========================================================================= */
     const _v1 = new THREE.Vector3();
     const _v2 = new THREE.Vector3();
+    // Reusable Three.js vector for AI. Cannon Vec3 has vsub(), not THREE.Vector3.sub().
+    const _playerWorldPos = new THREE.Vector3();
 
     // 2D Canvas Tactical Minimap / Radar
     const minimapCanvas = document.getElementById('minimap-canvas');
@@ -2590,8 +2592,9 @@
           weaponRig.rotation.set(-recoilSpring.position.y * 3.0, swaySpring.position.x * 2.0, 0);
         }
 
-        // Feinde & KI FSM
-        enemies.forEach(en => en.update(delta, playerBody.position));
+        // Feinde & KI FSM: convert Cannon's position to a Three.js vector once per frame.
+        _playerWorldPos.set(playerBody.position.x, playerBody.position.y, playerBody.position.z);
+        enemies.forEach(en => en.update(delta, _playerWorldPos));
 
         // Feindliche Projektile
         for (let i = projectiles.length - 1; i >= 0; i--) {
